@@ -1,0 +1,11 @@
+[Unit]
+Description=mqtt-republisher
+After=network.target
+
+[Service]
+ExecStart=/home/pi/mqtt-republisher/bin/python3 /home/pi/mqtt-republisher/mqtt-republisher.py
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
