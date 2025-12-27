@@ -39,4 +39,5 @@ Then modify the path to /home/pi/mqtt-republisher/bin/python3
     sudo systemctl start mqtt-republish.service
 
 Check the status:
+
     sudo systemctl status mqtt-republish.service
