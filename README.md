@@ -20,23 +20,23 @@ And that this path is correctly inserted in mqtt-republisher.py and mqtt-republi
 
 Set up a virtual environment
 
- cd /home/pi/mqtt-republisher
- python3 -m venv .
- source bin/activate
+    cd /home/pi/mqtt-republisher
+    python3 -m venv .
+    source bin/activate
 
 Install dependencies:
 
- pip3 install paho-mqtt
- pip3 install setproctitle
+    pip3 install paho-mqtt
+    pip3 install setproctitle
 
 Then modify the path to /home/pi/mqtt-republisher/bin/python3
  
-sudo cp mqtt-republish.service /etc/systemd/system
-sudo touch /var/log/mqtt-republisher.log
-sudo chown pi:pi /var/log/mqtt-republisher.log
+    sudo cp mqtt-republish.service /etc/systemd/system
+    sudo touch /var/log/mqtt-republisher.log
+    sudo chown pi:pi /var/log/mqtt-republisher.log
 
-sudo systemctl enable mqtt-republish.service
-sudo systemctl start mqtt-republish.service
+    sudo systemctl enable mqtt-republish.service
+    sudo systemctl start mqtt-republish.service
 
 Check the status:
-sudo systemctl status mqtt-republish.service
+    sudo systemctl status mqtt-republish.service
